@@ -1,7 +1,7 @@
 from transformers import TrainingArguments, Trainer
 from peft import LoraConfig, get_peft_model
-from src.losses import gap_loss, sft_loss, dpo_loss
-from src.collators import PairCollator
+from losses import gap_loss, sft_loss, dpo_loss
+from collators import PairCollator
 import os
 
 def build_trainer(model_name, method, ds, output, tokenizer,
